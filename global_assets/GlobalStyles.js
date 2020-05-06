@@ -21,6 +21,11 @@ const GlobalStyles = StyleSheet.create({
         backgroundColor: 'white',
         margin:4,
         alignItems:'flex-end'
+    },
+    winningScreen:{
+        flex:.75,
+        justifyContent:'center',
+        alignSelf:'center'
     }
 
 });

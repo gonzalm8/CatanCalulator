@@ -41,7 +41,7 @@ const App: () => React$Node = () => {
   }
 
   return (
-    <SafeAreaView style={{flex:1}}>
+    <SafeAreaView style={{ flex: 1, backgroundColor:'#094074'}}>
       <LevelCounter playerName={playerName} setResources={setResources} />
       <Resources resources={resources} resetResources={resetResources} />
     </SafeAreaView>

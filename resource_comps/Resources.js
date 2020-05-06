@@ -113,118 +113,135 @@ function Resources({ resources, resetResources }){
 
     return(
         //Resources Container 
-        <View style={{flex:2, flexDirection:'column', backgroundColor:'lime'}}>
+        <View style={{flex:3, flexDirection:'column', alignItems:'center'}}>
             {/* Brick Container */}
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor:'blue'}}>
+            <View style={{ flex: .5, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: 380, backgroundColor: 'beige'}}>
                 <View style={styles.resourceBox}>
                     <Text>Bricks:</Text>
-                    <Text>{brick}</Text>
-                    <TouchableOpacity
-                        onPress={addBrick}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon
-                            name='add'
-                        />
-                        
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={remBrick}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon
-                            name='remove'
-                        />
-                    </TouchableOpacity>
+                    <View style={{flex:.25, flexDirection:'row', paddingTop:5}}>
+                        <TouchableOpacity
+                            onPress={remBrick}
+                            style={{
+                                alignSelf:'flex-start'
+                            }}
+                        >
+                            <Icon
+                                name='remove'
+                            />
+                            
+                        </TouchableOpacity>
+                        <Text style={{paddingLeft:10,paddingRight:10,paddingTop:5}}>{brick}</Text>
+                        <TouchableOpacity
+                            onPress={addBrick}
+                            style={{ alignSelf:'flex-start'}}
+                        >
+                            <Icon
+                                name='add'
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 {/* Wood Container */}
                 <View style={styles.resourceBox}>
-                    <Text>Wood: {wood}</Text>
-                    <TouchableOpacity
-                        onPress={addWood}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon 
-                            name='add'
-                        />
+                    <Text>Wood:</Text>
+                    <View style={{ flex: .25, flexDirection: 'row', paddingTop: 5 }}>
+                        <TouchableOpacity
+                            onPress={remWood}
+                        >
+                            <Icon 
+                                name='remove'
+                            />
 
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={remWood}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon 
-                            name='remove'
-                        />
-                    </TouchableOpacity>
+                        </TouchableOpacity>
+                        <Text style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 5 }}>{wood}</Text>
+                        <TouchableOpacity
+                            onPress={addWood}
+                        >
+                            <Icon 
+                                name='add'
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
-            <View style={{flex:1, flexDirection:'row', justifyContent:'center', alignItems:'center',backgroundColor:'orange'}}>
+            {/* End of blue container*/}
+
+            <View style={{ flex: .5, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: 380, backgroundColor: 'beige'}}>
                 {/* Wheat Container */}
                 <View style={styles.resourceBox}>
-                    <Text>Wheat: {wheat}</Text>
-                    <TouchableOpacity
-                        onPress={addWheat}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon
-                            name='add'
-                        />
+                    <Text>Wheat:</Text>
+                    <View style={{ flex: .25, flexDirection: 'row', paddingTop: 5 }}>
+                        <TouchableOpacity
+                            onPress={remWheat}
+                            style={GlobalStyles.buttonStyle}
+                        >
+                            <Icon
+                                name='remove'
+                            />
 
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={remWheat}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon
-                            name='remove'
-                        />
-                    </TouchableOpacity>
+                        </TouchableOpacity>
+                        <Text style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 5 }}>{wheat}</Text>
+                        <TouchableOpacity
+                            onPress={addWheat}
+                            style={GlobalStyles.buttonStyle}
+                        >
+                            <Icon
+                                name='add'
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 {/* Sheep Container */}
                 <View style={styles.resourceBox}>
-                    <Text>Sheep: {sheep}</Text>
-                    <TouchableOpacity
-                        onPress={addSheep}
-                        style={GlobalStyles.buttonRight}
-                    >
-                        <Icon
-                            name='add'
-                        />
+                    <Text>Sheep:</Text>
+                    <View style={{ flex: .25, flexDirection: 'row', paddingTop: 5 }}>
+                        
+                        <TouchableOpacity
+                            onPress={remSheep}
+                            style={GlobalStyles.buttonStyle}
+                        >
+                            <Icon
+                                name='remove'
+                            />
 
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={remSheep}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon
-                            name='remove'
-                        />
-                    </TouchableOpacity>
+                        </TouchableOpacity>
+                        <Text style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 5 }}>{sheep}</Text>
+                        <TouchableOpacity
+                            onPress={addSheep}
+                            style={GlobalStyles.buttonStyle}
+                        >
+                            <Icon
+                                name='add'
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 {/* Stone Container */}
                 <View style={styles.resourceBox}>
-                    <Text>Stone: {stone}</Text>
-                    <TouchableOpacity
-                        onPress={addStone}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon
-                            name='add'
-                        />
+                    <Text>Stone:</Text>
+                    <View style={{ flex: .25, flexDirection: 'row', paddingTop: 5 }}>
+                        <TouchableOpacity
+                            onPress={remStone}
+                            style={GlobalStyles.buttonStyle}
+                        >
+                            <Icon
+                                name='remove'
+                            />
 
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={remStone}
-                        style={GlobalStyles.buttonStyle}
-                    >
-                        <Icon
-                            name='remove'
-                        />
-                    </TouchableOpacity>
+                        </TouchableOpacity>
+                        <Text style={{ paddingLeft: 10, paddingRight: 10, paddingTop: 5 }}>{stone}</Text>
+                        <TouchableOpacity
+                            onPress={addStone}
+                            style={GlobalStyles.buttonStyle}
+                        >
+                            <Icon
+                                name='add'
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
-            <View style={{flex:1}}>
+            <View style={{ flex: 1, width: 380}}>
                 <ResourceCalc getUpdatedResources={getUpdatedResources} structures={structures} setStructures={setStructures} />
             </View>
         </View>
@@ -233,8 +250,10 @@ function Resources({ resources, resetResources }){
 
 const styles = StyleSheet.create({
     resourceBox:{
+        // flex:.5,
+        flexDirection:'column',
         backgroundColor:'beige',
-        width:150,
+        width:120,
         alignItems:'center',
         margin:4
     }

@@ -61,9 +61,9 @@ function LevelCounter({ playerName, setResources }){
                         <WinnerScreen playerName={playerName} resetLevel={resetLevel}/> 
                     </Modal>
                     <View style={{flex:1.5,height:75}}>
-                        <Text style={{fontSize:40, paddingTop:30}}>{playerName}</Text>
+                        <Text style={{color:'white',fontSize:40, paddingTop:30}}>{playerName}</Text>
                     </View>
-                    <View style={{flex:2,width:400, marginTop:10,flexDirection:'row', backgroundColor:'pink'}}>
+                    <View style={{flex:2,width:400, marginTop:10,flexDirection:'row'}}>
                     {/* Change these to arrow icons! */}
                         <TouchableOpacity
                             onPress={remLevel}
@@ -83,6 +83,7 @@ function LevelCounter({ playerName, setResources }){
                             fontSize:50,
                             height:100,
                             textAlign:'center',
+                            color:'white'
                         }}>
                             {level}
                         </Text>

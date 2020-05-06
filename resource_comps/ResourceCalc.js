@@ -96,25 +96,30 @@ function ResourceCalc( {getUpdatedResources, structures, setStructures} ){
     }
 
     return(
-        <View style={{ flex:1,backgroundColor:'yellow'}}>
-            <View style={{ flex: 2, flexDirection: 'row'}}>
-                <View style={{flex:1, backgroundColor:'lime',flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+        <View style={{ flex: 1, justifyContent:'center'}}>
+            <View style={{ flex: 2, flexDirection: 'row', backgroundColor:'beige'}}>
+                <View style={{ flex: 1.5, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly' }}>
                     <Text style={{ paddingBottom:12,fontSize:20}}>Roads: {roads}</Text>
                     <Text style={{ fontSize: 20 }}>Cities: {cities}</Text>
                     
                 </View>
-                <View style={{ flex: 1, backgroundColor:'crimson',flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                <View style={{ flex: 2,flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly' }}>
                     <Text style={{ paddingBottom:12,fontSize: 20 }}>Settlements: {houses}</Text>
                     <Text style={{ fontSize: 20 }}>Development Card: {devCard}</Text>
                 </View>
             </View>
-            <View style={{ flex: 1, justifyContent:'center',alignItems:'center',backgroundColor: 'yellow' }}>
+            <View style={{ 
+                flex: 1, 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                marginTop: 15,
+                borderRadius: 5,
+                backgroundColor:'beige'}}>
                 <View>
                     <TouchableOpacity
                         onPress={calcBuildings}
-                        style={GlobalStyles.buttonStyle}
                     >
-                        <Text>Cacl Options</Text>
+                        <Text style={{fontSize:15}}>Cacl Options</Text>
                     </TouchableOpacity>
                 </View>
             </View>
